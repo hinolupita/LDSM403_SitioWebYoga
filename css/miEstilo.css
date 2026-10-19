@@ -1,0 +1,409 @@
+/* Colores */
+:root {
+    --color-verde: #2a755c;
+    --color-naranja: #c9603b;
+    --color-cafe: #4a3525;
+    --color-fondo-suave: #f5efe9;
+    --color-beige-claro: #f7f3ee;
+    --color-borde: #e5e0dc;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#fafafa;
+    color:#333;
+}
+h1,h2,h3,h4,h5{
+    font-family:'Playfair Display',serif;
+}
+
+.container a{
+    color: #000;
+}
+.container button{
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #000;
+    border-radius: 70%;
+}
+
+/* Botones circulares */
+.icon-circle-40 {
+    width: 40px;
+    height: 40px;
+}
+
+#inicio{
+    background-image: url('../image/inicio.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+.inicio-titulo{
+    color: #fff;
+    margin-top: 35%;
+    line-height: 1.2;
+}
+.btn{
+    background-color: var(--color-verde);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.metric-circle {
+    width: 90px;
+    height: 90px;
+    background-color: #626e4cb4;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+.metric-num {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    color: #e9ffb6;
+}
+
+
+/* Ajuste de las tarjetas */
+#carouselYoga .card {
+    border: 1px solid #eaeaea;
+    border-radius: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+#carouselYoga .card img {
+    height: 240px;
+    object-fit: cover;
+}
+
+/* Fechas flotantes */
+#carouselYoga .carousel-control-prev,
+#carouselYoga .carousel-control-next {
+    width: 5%;
+    opacity: 1;
+}
+
+.custom-control-prev {
+    left: -10px;
+}
+
+.custom-control-next {
+    right: -10px;
+}
+
+#carouselYoga .btn-arrow {
+    width: 45px;
+    height: 45px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-naranja);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    font-size: 1.1rem;
+    transition: background-color 0.2s ease;
+}
+
+#carouselYoga .btn-arrow:hover {
+    background-color: #f8f8f8;
+}
+
+
+#frase{
+    background-color: var(--color-beige-claro);
+}
+
+.quote-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    overflow: visible !important;
+}
+
+.quote-box {
+    width: 100%;
+    background: #ffffff;
+    padding: 40px 40px 40px 200px !important;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    position: relative;
+    z-index: 1;
+}
+
+.quote-img-floating {
+    position: absolute;
+    left: -30px;
+    bottom: 0;
+    height: 120%;
+    max-height: 340px;
+    width: auto;
+    object-fit: contain;
+    z-index: 5;
+}
+
+/* Contenedor principal */
+.tutorials-masonry-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .tutorials-masonry-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tutorial-col {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.section-main-title {
+    font-family: 'Georgia', serif;
+    color: var(--color-cafe);
+    font-weight: 400;
+    font-size: 2.2rem;
+}
+
+.tutorial-card {
+    border: 1px solid var(--color-borde);
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-wrapper {
+    height: 260px;
+    overflow: hidden;
+}
+
+.tutorial-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge-tag,
+.tutorial-badge {
+    display: inline-block;
+    border-radius: 50px;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+.badge-tag {
+    padding: 6px 18px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.tutorial-badge {
+    padding: 5px 16px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+
+/* Colores - Carrusel */
+.badge-tag.health,
+.badge-tag.material,
+.badge-tag.estilo {
+    background-color: var(--color-verde);
+}
+
+.badge-tag.tutorial,
+.badge-tag.meditacion,
+.badge-tag.dolor {
+    background-color: var(--color-naranja);
+}
+
+/* Colores - toriales */
+.tutorial-badge.health,
+.tutorial-badge.pain-relief {
+    background-color: var(--color-naranja);
+}
+
+.tutorial-badge.lifestyle,
+.tutorial-badge.meditation {
+    background-color: var(--color-verde);
+}
+
+/* Círculo flotante con icono */
+.floating-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-naranja);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.floating-icon.bg-green-icon {
+    background-color: var(--color-verde);
+}
+
+.tutorial-card .card-body {
+    padding: 24px;
+    text-align: center;
+}
+
+.tutorial-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.15rem;
+    color: #2c2c2c;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.tutorial-date {
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    color: #999;
+}
+
+/* Efecto desnivel */
+.tutorial-col:not(.col-center) {
+    margin-top: 60px;
+}
+
+.tutorial-col.col-center {
+    margin-top: 0;
+}
+
+.text-brown {
+    color: var(--color-cafe);
+    font-family: 'Georgia', serif;
+}
+
+.custom-contact-card {
+    border-radius: 0;
+    border-color: var(--color-borde) !important;
+}
+
+.contact-icon-box {
+    width: 42px;
+    height: 42px;
+    background-color: var(--color-fondo-suave);
+    color: var(--color-naranja);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.btn-brown {
+    background-color: var(--color-naranja);
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-brown:hover {
+    background-color: #ab4e2d;
+}
+
+/* Accordion */
+.custom-accordion .accordion-button {
+    background-color: #ffffff !important;
+    color: var(--color-cafe);
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    background-color: #fcfaf8 !important;
+    color: var(--color-naranja);
+    box-shadow: none !important;
+}
+
+.custom-accordion .accordion-button:focus {
+    box-shadow: none !important;
+    border-color: rgba(0, 0, 0, 0.125);
+}
+
+.custom-accordion .accordion-item {
+    border: 1px solid var(--color-borde) !important;
+    border-radius: 0 !important;
+    overflow: hidden;
+}
+
+.footer-yoga {
+    background-color: var(--color-verde);
+}
+
+/* Diseño responsivo para tablet */
+@media (max-width: 768px) {
+    .logo.col-4 {
+        order: -1;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 12px;
+    }
+    .col-4.d-flex.gap-3,
+    .col-4.d-flex.justify-content-end {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+ 
+    .tutorials-masonry-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .tutorial-col:not(.col-center) {
+        margin-top: 0;
+    }
+
+    .quote-box {
+        padding: 40px 25px !important;
+    }
+    .quote-img-floating {
+        display: none;
+    }
+}
+ 
+/* Diseño responsivo para celulares */
+@media (max-width: 576px) {
+    #inicio {
+        height: auto;
+        padding: 70px 0;
+    }
+    .inicio-titulo {
+        margin-top: 0;
+    }
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    .metric-circle {
+        width: 70px;
+        height: 70px;
+    }
+    .metric-num {
+        font-size: 1rem;
+    }
+}
+ 

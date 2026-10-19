@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HashTag</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/miEstilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header -->
+    <div class="border-bottom bg-white py-4">
+        <div class="container">
+            <div class="row align-items-baseline">
+                <div class="col-4 d-flex gap-3">
+                    <a href="" class="fs-4">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="" class="fs-4">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="" class="fs-4">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="" class="fs-4">
+                        <i class="bi bi-pinterest"></i>
+                    </a>
+                </div>
+
+                <div class="logo col-4 text-center">
+                    <img src="image/logo.jpg" alt="Logo" class="img-fluid" style="max-height: 80px;">
+                </div>
+
+                <div class="col-4 d-flex justify-content-end gap-2">
+                    <button type="button" class="btn btn-light rounded-circle d-flex align-items-center justify-content-center icon-circle-40" id="btnSearchToggle">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <div id="smallSearchBox" class="d-none">
+                        <form class="d-flex align-items-center" role="search" action="buscar.php" method="GET">
+                            <input class="form-control form-control-sm rounded-pill px-3" type="search" name="q" placeholder="Buscar yoga..." style="width: 180px;" id="searchInput" autofocus>
+                            <button type="button" class="btn btn-sm text-muted ms-1 p-0" id="btnCloseSearch">
+                                <i class="bi bi-x-lg"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center icon-circle-40 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                        <i class="bi bi-list fs-5"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top py-2 border-bottom">
+        <div class="container">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#inicio">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#video">VIDEOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#frase">MOTIVACIÓN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tutorial">TUTORIALES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">CONTACTO</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <header id="inicio" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="inicio-titulo">
+                        <h2 class="hero-title mb-4">Los mejores tutoriales de yoga para entrenamientos en casa</h2>
+                        <p class="hero-text mb-4">Encontrar los mejores tutoriales de yoga para entrenamientos en casa puede mejorar enormemente tu práctica y ayudarte a lograr tus objetivos de acondicionamiento físico.</p>
+                        <a href="#tutoriales" class="btn rounded-pill px-4">Empezar a aprender</a>
+                        <div class="d-flex gap-4 align-items-center">
+                            <div class="d-flex gap-4 align-items-center mt-5">
+                                <div class="metric-circle">
+                                    <span class="metric-num">130+</span>
+                                    <span class="metric-label">Lecciones</span>
+                                </div>
+                                <div class="metric-circle">
+                                    <span class="metric-num">30+</span>
+                                    <span class="metric-label">Cursos</span>
+                                </div>
+                                <div class="metric-circle">
+                                    <span class="metric-num">15+</span>
+                                    <span class="metric-label">Tutores</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Videos -->
+    <article id="video">
+        <div class="container d-flex align-items-center justify-content-between my-5">
+            <h2 class="text-start m-4">Videos de yoga destacados</h2>
+            <div class="d-flex align-items-center gap-3">
+                <span class="linea"></span>
+                <a href="#" class="btn btn-view rounded-pill text-white">Ver más</a>
+            </div>
+        </div>
+
+        <div id="carouselYoga" class="carousel slide position-relative px-md-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-6 col-md-4 d-flex justify-content-center mb-3">
+                            <div class="card w-100">
+                                <img src="image/carrusel1.jpg" class="card-img-top" alt="Poses faciles de yoga">
+                                <div class="card-body text-center pt-3">
+                                    <span class="badge-tag health">Salud</span>
+                                    <h5 class="post-title">Las mejores poses de yoga para principiantes</h5>
+                                    <div class="post-date">— Octubre 12, 2026 —</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 d-flex justify-content-center mb-3">
+                            <div class="card w-100">
+                                <img src="image/carrusel2.jpg" class="card-img-top" alt="Espacio de bienestar">
+                                <div class="card-body text-center pt-3">
+                                    <span class="badge-tag tutorial">Tutorial</span>
+                                    <h5 class="post-title">Crear un espacio de bienestar en casa</h5>
+                                    <div class="post-date">— Octubre 12, 2025 —</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 d-flex justify-content-center mb-3">
+                            <div class="card w-100">
+                                <img src="image/carrusel3.jpg" class="card-img-top" alt="Libros de yoga">
+                                <div class="card-body text-center pt-3">
+                                    <span class="badge-tag material">Material</span>
+                                    <h5 class="post-title">Libros sobre yoga, guías y recursos</h5>
+                                    <div class="post-date">— Octubre 12, 2024 —</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+
+                        <div class="col-sm-6 col-md-4 d-flex justify-content-center mb-3">
+                            <div class="card w-100">
+                                <img src="image/carrusel4.jpg" class="card-img-top" alt="Yoga y meditacion">
+                                <div class="card-body text-center pt-3">
+                                    <span class="badge-tag meditacion">Meditación</span>
+                                    <h5 class="post-title">Técnicas de respiración y relajación guiada</h5>
+                                    <div class="post-date">— Octubre 15, 2026 —</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 d-flex justify-content-center mb-3">
+                            <div class="card w-100">
+                                <img src="image/carrusel5.jpg" class="card-img-top" alt="Yoga para espalda">
+                                <div class="card-body text-center pt-3">
+                                    <span class="badge-tag dolor">Alivio del dolor</span>
+                                    <h5 class="post-title">Secuencias efectivas para aliviar la tensión lumbar</h5>
+                                    <div class="post-date">— Octubre 18, 2026 —</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 d-flex justify-content-center mb-3">
+                            <div class="card w-100">
+                                <img src="image/carrusel6.jpg" class="card-img-top" alt="Estilo de vida yoga">
+                                <div class="card-body text-center pt-3">
+                                    <span class="badge-tag estilo">Estilo de vida</span>
+                                    <h5 class="post-title">Hábitos esenciales para integrar el yoga a tu rutina</h5>
+                                    <div class="post-date">— Octubre 20, 2026 —</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev custom-control-prev" type="button" data-bs-target="#carouselYoga" data-bs-slide="prev">
+                <span class="btn-arrow"><i class="bi bi-chevron-left"></i></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next custom-control-next" type="button" data-bs-target="#carouselYoga" data-bs-slide="next">
+                <span class="btn-arrow"><i class="bi bi-chevron-right"></i></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </article>
+
+    <!-- Frase -->
+    <article id="frase" class="py-5">
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="quote-wrapper">
+                <img src="image/poses.png" alt="Yoga pose" class="quote-img-floating">
+                <div class="quote-box bg-white p-4 p-md-5 rounded shadow-sm">
+                    <div class="quote-icon text-success fs-1 mb-2">❝</div>
+                    <h2 class="section-title mb-3 fs-5 fst-italic">
+                        "El yoga es la práctica de silenciar la mente y escuchar el cuerpo."
+                    </h2>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="quote-line"></span>
+                        <p class="section-text mb-0 ms-2 fw-bold text-uppercase small text-muted">
+                            -B.K.S. Iyengar
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Tutorial -->
+    <section id="tutorial" class="latest-tutorials py-5">
+        <div class="container">
+            <h2 class="section-main-title text-center mb-5">Latest Yoga Tutorials</h2>
+
+            <div class="tutorials-masonry-wrapper">
+
+            <!-- Tarjetas 1, 4, 7 y 10 -->
+            <div class="tutorial-col">
+                <div class="tutorial-card">
+                    <div class="card-img-wrapper position-relative">
+                        <img src="image/poses1.jpg" alt="Yoga Studio" class="tutorial-img">
+                        <span class="floating-icon"><i class="bi bi-play-fill"></i></span>
+                    </div>
+                    <div class="card-body text-center">
+                        <span class="tutorial-badge health">Salud</span>
+                        <h5 class="tutorial-title">Crea tu propio y hermoso estudio de yoga en casa</h5>
+                        <span class="tutorial-date">OCTOBER 13, 2023</span>
+                    </div>
+                </div>
+
+                <div class="tutorial-card">
+                    <div class="card-img-wrapper position-relative">
+                        <img src="image/poses4.jpg" alt="Advanced Yoga" class="tutorial-img">
+                        <span class="floating-icon bg-green-icon"><i class="bi bi-camera-fill"></i></span>
+                    </div>
+                    <div class="card-body text-center">
+                        <span class="tutorial-badge lifestyle">Estilo de vida</span>
+                        <h5 class="tutorial-title">Sesiones avanzadas de yoga con gurús del yoga.</h5>
+                        <span class="tutorial-date">OCTOBER 13, 2023</span>
+                    </div>
+                </div>
+
+                <div class="tutorial-card">
+                    <div class="card-img-wrapper position-relative">
+                        <img src="image/poses7.jpg" alt="Yoga Mat Flow" class="tutorial-img">
+                        <span class="floating-icon"><i class="bi bi-play-fill"></i></span>
+                    </div>
+                    <div class="card-body text-center">
+                        <span class="tutorial-badge health">Salud</span>
+                        <h5 class="tutorial-title">Rutinas matutinas para revitalizar tu cuerpo</h5>
+                        <span class="tutorial-date">OCTOBER 13, 2023</span>
+                    </div>
+                </div>
+
+                <div class="tutorial-card">
+                    <div class="card-img-wrapper position-relative">
+                        <img src="image/poses10.jpg" alt="Postura y Espalda" class="tutorial-img">
+                        <span class="floating-icon bg-green-icon"><i class="bi bi-camera-fill"></i></span>
+                    </div>
+                    <div class="card-body text-center">
+                        <span class="tutorial-badge pain-relief">Alivio del dolor</span>
+                        <h5 class="tutorial-title">Ejercicios clave para mejorar tu postura corporal</h5>
+                        <span class="tutorial-date">OCTOBER 13, 2023</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjetas 2, 5, 8 y 11 -->
+            <div class="tutorial-col col-center">
+
+                <div class="tutorial-card">
+                    <div class="card-img-wrapper position-relative">
+                        <img src="image/poses2.jpg" alt="Lifestyle" class="tutorial-img">
+                        <span class="floating-icon bg-green-icon"><i class="bi bi-camera-fill"></i></span>
+                    </div>
+                    <div class="card-body text-center">
+                        <span class="tutorial-badge lifestyle">Estilo de vida</span>
+                        <h5 class="tutorial-title">10 cosas que no debes hacer antes de practicar yoga</h5>
+                        <span class="tutorial-date">OCTOBER 13, 2023</span>
+                    </div>
+                </div>
+
+                <div class="tutorial-card">
+                    <div class="card-img-wrapper position-relative">
+                        <img src="image/poses5.jpg" alt="Meditation" class="tutorial-img">
+                        <span class="floating-icon"><i class="bi bi-play-fill"></i></span>
+                    </div>
+                    <div class="card-body text-center">
+                        <span class="tutorial-badge meditation">Meditación</span>
+                        <h5 class="tutorial-title">Cómo motivarte para hacer ejercicio a diario</h5>
+                        <span class="tutorial-date">OCTOBER 13, 2023</span>
+                    </div>
+                </div>
+
+                <div class="tutorial-card">
+                    <div class="card-img-wrapper position-relative">
+                        <img src="image/poses8.jpg" alt="Respira Profundo" class="tutorial-img">
+                        <span class="floating-icon"><i class="bi bi-play-fill"></i></span>
+                    </div>
+                    <div class="card-body text-center">
+                        <span class="tutorial-badge meditation">Meditación</span>
+                        <h5 class="tutorial-title">Técnicas de respiración para reducir el estrés</h5>
+                        <span class="tutorial-date">OCTOBER 13, 2023</span>
+                    </div>
+                </div>
+
+                <div class="tutorial-card">
+                    <div class="card-img-wrapper position-relative">
+                        <img src="image/poses11.jpg" alt="Yoga Nocturno" class="tutorial-img">
+                        <span class="floating-icon bg-green-icon"><i class="bi bi-camera-fill"></i></span>
+                    </div>
+                    <div class="card-body text-center">
+                        <span class="tutorial-badge lifestyle">Estilo de vida</span>
+                        <h5 class="tutorial-title">Secuencia suave para relajar la mente antes de dormir</h5>
+                        <span class="tutorial-date">OCTOBER 13, 2023</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjetas 3, 6, 9 y 12 -->
+            <div class="tutorial-col">
+
+                <div class="tutorial-card">
+                    <div class="card-img-wrapper position-relative">
+                        <img src="image/poses3.jpg" alt="Pain Relief" class="tutorial-img">
+                        <span class="floating-icon"><i class="bi bi-play-fill"></i></span>
+                    </div>
+                    <div class="card-body text-center">
+                        <span class="tutorial-badge pain-relief">Alivio del dolor</span>
+                        <h5 class="tutorial-title">Hacer yoga en la naturaleza nos da frescura</h5>
+                        <span class="tutorial-date">OCTOBER 13, 2023</span>
+                    </div>
+                </div>
+
+                <div class="tutorial-card">
+                    <div class="card-img-wrapper position-relative">
+                        <img src="image/poses6.jpg" alt="Yoga Instructor" class="tutorial-img">
+                        <span class="floating-icon bg-green-icon"><i class="bi bi-camera-fill"></i></span>
+                    </div>
+                    <div class="card-body text-center">
+                        <span class="tutorial-badge lifestyle">Estilo de vida</span>
+                        <h5 class="tutorial-title">Por qué necesitas un buen instructor de yoga?</h5>
+                        <span class="tutorial-date">OCTOBER 13, 2023</span>
+                    </div>
+                </div>
+
+                <div class="tutorial-card">
+                    <div class="card-img-wrapper position-relative">
+                        <img src="image/poses9.jpg" alt="Estiramientos de Espalda" class="tutorial-img">
+                        <span class="floating-icon"><i class="bi bi-play-fill"></i></span>
+                    </div>
+                    <div class="card-body text-center">
+                        <span class="tutorial-badge pain-relief">Alivio del dolor</span>
+                        <h5 class="tutorial-title">Posturas eficientes para aliviar el dolor lumbar</h5>
+                        <span class="tutorial-date">OCTOBER 13, 2023</span>
+                    </div>
+                </div>
+
+                <div class="tutorial-card">
+                    <div class="card-img-wrapper position-relative">
+                        <img src="image/poses12.jpg" alt="Flexibilidad Total" class="tutorial-img">
+                        <span class="floating-icon bg-green-icon"><i class="bi bi-camera-fill"></i></span>
+                    </div>
+                    <div class="card-body text-center">
+                        <span class="tutorial-badge health">Salud</span>
+                        <h5 class="tutorial-title">Guía de flexibilidad y equilibrio para principiantes</h5>
+                        <span class="tutorial-date">OCTOBER 13, 2023</span>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+     <section id="contacto" class="py-5 bg-light">
+        <div class="container my-4">
+
+            <div class="text-center mb-5">
+                <h2 class="section-main-title">Ponte en Contacto</h2>
+                <p class="text-muted">¿Tienes alguna duda sobre nuestras clases o talleres? Escríbenos.</p>
+            </div>
+
+            <div class="row g-5 align-items-start">
+                <div class="col-lg-5">
+                    <div class="bg-white p-4 p-md-5 border custom-contact-card shadow-sm">
+                        <h4 class="mb-4 text-brown">Información del Estudio</h4>
+
+                        <div class="d-flex align-items-center mb-4 gap-3">
+                            <div class="contact-icon-box">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Ubicación</h6>
+                                <small class="text-muted">Av. del Bienestar 123, León, Gto.</small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-4 gap-3">
+                            <div class="contact-icon-box">
+                                <i class="bi bi-envelope-fill"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Correo Electrónico</h6>
+                                <small class="text-muted">contacto@yogasite.com</small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-4 gap-3">
+                            <div class="contact-icon-box">
+                                <i class="bi bi-telephone-fill"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Teléfono</h6>
+                                <small class="text-muted">+52 (477) 123-4567</small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="contact-icon-box">
+                                <i class="bi bi-clock-fill"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Horario de Atención</h6>
+                                <small class="text-muted">Lun - Vie: 7:00 AM - 8:00 PM</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="bg-white p-4 p-md-5 border custom-contact-card shadow-sm">
+                        <h4 class="mb-4 text-brown">Envíanos un mensaje</h4>
+
+                        <form id="formContacto">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label text-muted small fw-bold">NOMBRE COMPLETO</label>
+                                    <input type="text" class="form-control rounded-pill px-3" id="nombre" placeholder="Tu nombre" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label text-muted small fw-bold">CORREO ELECTRÓNICO</label>
+                                    <input type="email" class="form-control rounded-pill px-3" id="email" placeholder="tu@correo.com" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="asunto" class="form-label text-muted small fw-bold">ASUNTO</label>
+                                    <input type="text" class="form-control rounded-pill px-3" id="asunto" placeholder="¿En qué te podemos ayudar?">
+                                </div>
+                                <div class="col-12">
+                                    <label for="mensaje" class="form-label text-muted small fw-bold">MENSAJE</label>
+                                    <textarea class="form-control rounded-4 p-3" id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-brown rounded-pill px-4 py-2 text-white">Enviar Mensaje</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mt-5 pt-4">
+                <div class="col-lg-10 mx-auto">
+                    <h3 class="text-center mb-4 text-brown fs-4">Preguntas Frecuentes</h3>
+
+                    <div class="accordion custom-accordion" id="faqAccordion">
+
+                        <div class="accordion-item border mb-2">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    ¿Necesito experiencia previa para tomar una clase?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    ¡Para nada! Nuestras sesiones están adaptadas para todos los niveles, desde principiantes que nunca han practicado yoga hasta practicantes avanzados.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border mb-2">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    ¿Qué debo llevar a mi primera sesión?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    Te recomendamos traer ropa cómoda, una botella de agua y tu propio tapete (mat) de yoga. Si no cuentas con uno, en el estudio podemos prestarte uno.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item border">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    ¿Cómo puedo inscribirme a las clases presenciales o en línea?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    Puedes enviarnos un mensaje a través del formulario superior o llamarnos directamente para reservar tu lugar.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Notificacion -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100;">
+        <div id="msgToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="bi bi-check-circle-fill me-2"></i> ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de pagina -->
+    <footer class="footer-yoga text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 HashTag Yoga. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const btnSearchToggle = document.getElementById('btnSearchToggle');
+        const smallSearchBox = document.getElementById('smallSearchBox');
+        const btnCloseSearch = document.getElementById('btnCloseSearch');
+        const searchInput = document.getElementById('searchInput');
+
+        btnSearchToggle.addEventListener('click', () => {
+            btnSearchToggle.classList.add('d-none');
+            smallSearchBox.classList.remove('d-none');
+            searchInput.focus();
+        });
+
+        btnCloseSearch.addEventListener('click', () => {
+            smallSearchBox.classList.add('d-none');
+            btnSearchToggle.classList.remove('d-none');
+        });
+    </script>
+    <script>
+        const formContacto = document.getElementById('formContacto');
+        const msgToast = document.getElementById('msgToast');
+
+        if (formContacto) {
+            formContacto.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const toast = new bootstrap.Toast(msgToast);
+                toast.show();
+
+                formContacto.reset();
+            });
+        }
+    </script>
+</body>
+</html>
